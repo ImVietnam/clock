@@ -20,7 +20,6 @@ function update(){
         let hours = date.getHours();
         let minutes = date.getMinutes();
         let seconds = date.getSeconds();
-        let amOrPm = hours >= 12 ? "chiều" : "sáng";
 
         hours = (hours % 12) || 12;
 
@@ -28,7 +27,7 @@ function update(){
         minutes = formatZeroes(minutes);
         seconds = formatZeroes(seconds);
 
-        return `Bây giờ là ${hours}:${minutes}:${seconds} ${amOrPm}, ${weekday} ${day} ${month} ${year} `;
+        return `Bây giờ là ${hours}:${minutes}:${seconds}, ${weekday} ${day} ${month} ${year} `;
     }
     function formatZeroes(time){
         time = time.toString();
